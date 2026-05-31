@@ -64,9 +64,9 @@ const sessionOptions = {
     httpOnly: true, //security purposes to avoid cross scripting attacks not needed details just know it
   },
 };
-// app.get("/", (req, res) => {
-//   res.send("Working");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 app.use(session(sessionOptions));
 app.use(flash());
 app.use(passport.initialize());
