@@ -3,7 +3,7 @@ A fully functional vacation rental web application built with the MERN-inspired 
 
 🚀 Live Demo
 
-[Add your deployed link here]
+https://airbnbclone-manas.onrender.com
 
 
 ✨ Features
