@@ -38,7 +38,7 @@
             height:3.25rem;
             padding:1rem;
             margin-left:3rem;
-        }
+    }
     </style>
     <div id="filters">
         <div class="filters">
@@ -100,7 +100,7 @@
                     <div class="card-img-overlay">Top rated</div>
                     <div class="card-body">
                         <p class="card-text">
-                            <b><%=listing.title%> </b><br>
+                            <b><%=listing.title%></b><br>
                             &#8377;<%= listing.price.toLocaleString("en-In") %> /night
                             <i class="tax-info"> &nbsp; &nbsp; +18% GST</i>
                         </p>
@@ -109,7 +109,6 @@
             </a>
         <%}%>
     </div>
-    
 </body>
 <script>
     const taxSwitch = document.getElementById("switchCheckDefault");

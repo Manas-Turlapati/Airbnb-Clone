@@ -15,6 +15,8 @@ router
 
 router.get("/new", isLoggedIn, wrapAsync(listingController.renderNewForm));
 
+router.route("/search/:q").get(wrapAsync(listingController.searchListing));
+
 router
   .route("/:id")
   .get(wrapAsync(listingController.showListing))
@@ -26,4 +28,5 @@ router.get(
   isOwner,
   wrapAsync(listingController.editListing),
 );
+
 module.exports = router;

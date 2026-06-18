@@ -32,8 +32,8 @@
       </div>
       <div class="navbar-nav ms-auto">
         <form class="d-flex" role="search">
-          <input class="form-control me-2 search-input" type="search" placeholder="Search Destinations" aria-label="Search"/>
-          <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          <input class="form-control me-2 search-input" type="search" placeholder="Search Destinations" aria-label="Search" id="input-search"/>
+          <button class="btn btn-search" type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </form>
       </div>
       <div class="navbar-nav ms-auto">
@@ -48,4 +48,16 @@
       </div>
     </div>
   </div>
+  <script>
+    let searchBtn = document.getElementById("search");
+    let searchListing = document.getElementById("input-search");
+    searchBtn.addEventListener("click",(e)=>{
+      e.preventDefault();
+      const result = searchListing.value.trim();
+      if(result){
+        window.location.href = `http://localhost:3000/listings/search/${result}`;
+      }
+    })
+  </script>
+
 </nav>
